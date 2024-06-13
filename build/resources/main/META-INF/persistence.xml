@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence xmlns="http://xmlns.jcp.org/xml/ns/persistence" version="2.2">
+    <persistence-unit name="booksPU">
+        <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
+        <class>com.distribuida.db.Book</class>
+        <properties>
+            <property name="jakarta.persistence.jdbc.driver" value="org.sqlite.JDBC"/>
+            <property name="jakarta.persistence.jdbc.url" value="jdbc:sqlite:books.db"/>
+            <property name="jakarta.persistence.schema-generation.database.action" value="drop-and-create"/>
+            <property name="jakarta.persistence.schema-generation.scripts.action" value="drop-and-create"/>
+            <property name="jakarta.persistence.schema-generation.scripts.create-target" value="create.sql"/>
+            <property name="jakarta.persistence.schema-generation.scripts.drop-target" value="drop.sql"/>
+            <property name="jakarta.persistence.schema-generation.create-source" value="metadata"/>
+            <property name="jakarta.persistence.schema-generation.drop-source" value="metadata"/>
+            <property name="jakarta.persistence.schema-generation.create-script-source" value="create.sql"/>
+            <property name="jakarta.persistence.schema-generation.drop-script-source" value="drop.sql"/>
+        </properties>
+    </persistence-unit>
+</persistence>
